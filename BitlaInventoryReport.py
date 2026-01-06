@@ -57,10 +57,10 @@ PROBLEM_OPERATOR_IDS = {
 # =============================== ZOHO MAIL CONFIG =========================
 SMTP_HOST = "smtp.zoho.in"
 SMTP_PORT = 587
-SMTP_USER = "madhu.l@hopzy.in"
-SMTP_PASSWORD = "JqkGLkfkTf0n"
+SMTP_USER = "avinash.sk@hopzy.in"
+SMTP_PASSWORD = "Ai4x0KC3eVjv"
 SENDER_EMAIL = SMTP_USER
-MANAGER_EMAIL = ("madhu.l@hopzy.in",)
+MANAGER_EMAIL = ("avinash.sk@hopzy.in",)
 
 
 # =============================== BACKOFF HELPERS ==========================
@@ -821,3 +821,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
