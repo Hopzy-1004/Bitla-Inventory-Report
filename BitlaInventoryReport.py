@@ -352,7 +352,7 @@ def build_html_summary(operator_map, daily_stats, overall_stats):
                  <table width="100%" cellpadding="0" cellspacing="0">
                    <tr>
                      <td align="left" valign="middle">
-                       <img src="cid:bitla_logo" alt="Bitla" style="height:32px;">
+                       <img src="cid:logo" alt="Bitla" style="height:32px;">
                      </td>
                      <td align="right" valign="middle" style="font-size:18px; font-weight:bold; color:#0066cc;">
                        7-Day Bitla Inventory Report
@@ -472,13 +472,13 @@ def send_report_email(subject, html_body, attachment, cc_emails=None):
     msg.set_content("This email contains an HTML Bitla inventory report.")
     html_part = msg.add_alternative(html_body, subtype="html")
 
-    # Attach inline Bitla logo (bitla_logo.jpg in current folder)
+    # Attach inline Bitla logo (logo.jpg in current folder)
     try:
         with open("logo.jpg", "rb") as img_file:
             logo_bytes = img_file.read()
         logo = MIMEImage(logo_bytes)
-        logo.add_header("Content-ID", "<bitla_logo>")
-        logo.add_header("Content-Disposition", "inline", filename="bitla_logo.jpg")
+        logo.add_header("Content-ID", "<logo>")
+        logo.add_header("Content-Disposition", "inline", filename="logo.jpg")
         html_part.attach(logo)
         print("Bitla logo attached inline.")
     except Exception as e:
@@ -821,5 +821,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
