@@ -474,7 +474,7 @@ def send_report_email(subject, html_body, attachment, cc_emails=None):
 
     # Attach inline Bitla logo (bitla_logo.jpg in current folder)
     try:
-        with open("bitla_logo.jpg", "rb") as img_file:
+        with open("logo.jpg", "rb") as img_file:
             logo_bytes = img_file.read()
         logo = MIMEImage(logo_bytes)
         logo.add_header("Content-ID", "<bitla_logo>")
@@ -821,4 +821,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
